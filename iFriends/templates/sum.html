@@ -1,0 +1,17 @@
+{% if calculator %}
+    <h3>Calculation Form</h3>
+    <form action="/calculator/" method="post"> 
+      {% csrf_token %}
+        <table>
+            {{ calculator }}
+        </table>
+	{% if answer %}
+	<table>
+	  <tr>
+	    <td> Answer is : {{answer}}</td>
+	  </tr>
+	</table>
+	{% endif %}
+        <input type="submit" value="Submit" />
+    </form>
+{% endif %}

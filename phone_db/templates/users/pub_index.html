@@ -1,0 +1,14 @@
+{% extends "base.html" %} 
+{% block title %}Publishers{% endblock %} 
+{% block content %}
+{% for pub in pubs %}
+<p>Publisher: {{ pub.name }}</p>
+    <!-- <p>Date of Publication: {{ book.pubdate|date }}</p> -->
+    <!-- <p>Price ${{ book.price }}</p> -->
+    <!-- <p>Author : -->
+    <!--     {% for a in book.authors.all %} -->
+    <!--         {{ a.name }} -->
+    <!--         {% if not forloop.last %}, {% endif %} -->
+    <!--     {% endfor %}</p> -->
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+{% block title %}Homepage{% endblock %} 
+
+{% comment %}
+{% block content %}    
+{% for book in books %}
+  <h4>{{ book.name }}</h4>    
+    <p>Publisher: {{ book.publisher.name }}</p>    
+    <p>Date of Publication: {{ book.pubdate|date }}</p>    
+    <p>Price ${{ book.price }}</p>     
+    <p>Author : 
+        {% for a in book.authors.all %}
+            {{ a.name }}
+            {% if not forloop.last %}, {% endif %}
+        {% endfor %}</p>   
+{% endfor %} 
+{% endblock %}
+{% endcomment %}
+    
+    {% block content %}
+    <table>
+      <tr>
+	<td>Sr.No</td>
+	<td>Name</td>
+	<td>Address</td>
+	<td>Mobile</td>
+	<td>home</td>
+      </tr>
+      {% for emp in emps %}      
+      <tr>
+	<td>{{ emp.id }}</td>
+	<td>{{ emp.name }}</td>
+	<td>{{ emp.address }}</td>
+	<td>{{ emp.mobile }}</td>
+	<td>{{ emp.home }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    {% endblock %}
+    

@@ -1,0 +1,3 @@
+* Django practice
+
+**** All my django practice projects

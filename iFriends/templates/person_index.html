@@ -1,0 +1,20 @@
+{% extends "ifriends_base.html" %}
+{% block title %}People{% endblock %}
+{% block content %}
+<table width=100%>
+  <tr bgcolor="aabbcc">
+    <td colspan="3">
+      <font size="5" color="white">Personal List</font>
+    </td>
+  </tr>
+  
+  <tr valign="top">
+    <td width=30% bgcolor="aaaaaa">
+      <font color="white" size="5">
+	{% for p in plist %}
+	<p>{{ forloop.counter }}. {{ p.name }}</p>
+	{% endfor %}
+      </font>
+    </td>
+  </tr>
+  {% endblock %}

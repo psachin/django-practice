@@ -1,0 +1,5 @@
+# .gitignore for aakash_remote_technician
+
+*~
+*.db
+*.orig

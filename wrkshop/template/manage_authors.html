@@ -1,0 +1,11 @@
+<!-- <form method="post" action=""> -->
+<!--   {{formset}} -->
+<!-- </form> -->
+
+<form method="post" action="">
+  {{ formset.management_form }}
+  {% for form in formset %}
+  {{ form }}
+  {% endfor %}
+</form>
+

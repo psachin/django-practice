@@ -1,0 +1,29 @@
+* Django
+
+====
+Django “no such column” error
+---
+python manage.py reset [appname]
+python manage.py syncdb
+
+====
+coercing to Unicode: need string or buffer
+---
+return u'%s' % (self.name)
+
+
+--------------------
+to validate database
+
+./manage
+
+
+to generate tables from model
+
+./manage.py sqlall <app_name>
+
+ex.
+
+./manage.py sqlall books
+
+

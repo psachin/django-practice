@@ -1,0 +1,15 @@
+{% extends "base.html" %} 
+{% block title %}Homepage{% endblock %} 
+{% block content %}    
+{% for book in books %}
+  <h4>{{ book.name }}</h4>    
+    <p>Publisher: {{ book.publisher.name }}</p>    
+    <p>Date of Publication: {{ book.pubdate|date }}</p>    
+    <p>Price ${{ book.price }}</p>     
+    <p>Author : 
+        {% for a in book.authors.all %}
+            {{ a.name }}
+            {% if not forloop.last %}, {% endif %}
+        {% endfor %}</p>   
+{% endfor %} 
+{% endblock %}
