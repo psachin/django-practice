@@ -1,0 +1,11 @@
+{% extends 'rango/base.html' %}
+{% load static %}
+{% block body_block %}
+<div class="hero-unit">
+<div class="container">
+<h1 class="form-signin-heading">Hello {{username}}! </h1>
+<p class="text-success">{{message}}</p>
+    <img src="{% static "rango.jpeg" %}" alt="Picture of Rango" class="img-circle"/>
+</div>
+</div>
+{% endblock %}

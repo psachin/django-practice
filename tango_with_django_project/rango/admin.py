@@ -1,0 +1,15 @@
+from django.contrib import admin
+from rango.models import Category, Page, UserProfile
+
+class PageAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('Title',    {'fields': ['title']}),
+        ('Category', {'fields': ['category']}),
+        ('Url',      {'fields': ['url']}),
+    ]
+     
+    list_display = ('title','category', 'url')
+    
+admin.site.register(Category)
+admin.site.register(Page, PageAdmin)
+admin.site.register(UserProfile)
